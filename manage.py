@@ -5,7 +5,9 @@ from flask_migrate import Migrate, MigrateCommand
 from platform import app
 from exts import db
 from models import User, Question, Answer
+import pymysql
 
+pymysql.install_as_MySQLdb()
 manager = Manager(app)
 
 # 使用Migrate绑定app和db
